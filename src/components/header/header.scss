@@ -1,0 +1,113 @@
+@import '../../theme/scss/variables.scss';
+@import '../../theme/scss/mixins/button.scss';
+
+.header {
+  position: relative;
+  padding: 10px 15px;
+  background: #fff;
+
+  &::after {
+    content: '';
+    clear: both;
+    display: table;
+  }
+
+  @media (min-width: $small-tablet-width) {
+    padding-left: 240px;
+    padding-top: 65px;
+    padding-bottom: 49px;
+  }
+
+  @media (min-width: 1440px) {
+    padding-right: 84px;
+    padding-left: 456px;
+  }
+
+  &__logo {
+    width: 205px;
+    margin: 0 auto;
+
+    @media (min-width: $small-tablet-width) {
+      position: absolute;
+      left: 0;
+      top: 45px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 318px;
+      left: 73px;
+      top: 30px;
+    }
+  }
+
+  &__nav {
+    float: left;
+    max-width: 386px;
+
+    @media (min-width: 955px) {
+      max-width: 562px;
+    }
+  }
+
+  &__nav-link {
+    display: none;
+    position: relative;
+    min-width: 90px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    margin-right: 30px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #A6ABBD;
+    transition: .5s;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover,
+    &:focus {
+      @include button;
+    }
+
+    &:active {
+      opacity: .3;
+    }
+
+    @media (min-width: $small-tablet-width) {
+      display: inline-block;
+    }
+
+    @media (min-width: 955px) {
+      min-width: 117px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-right: 46px;
+    }
+  }
+
+  &__button {
+    @include button;
+    display: none;
+    float: right;
+    min-width: 117px;
+    padding: 6px 10px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+    transition: .5s;
+
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 1;
+    }
+
+    @media (min-width: $small-tablet-width) {
+      display: block;
+    }
+  }
+}

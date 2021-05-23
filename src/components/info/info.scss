@@ -1,0 +1,65 @@
+@import '../../theme/scss/mixins/title-line.scss';
+@import '../../theme/scss/variables.scss';
+
+.info {
+  padding: 60px 15px 0;
+  background: #f8fbff;
+  margin-bottom: 45px;
+
+  @media (min-width: $small-tablet-width) {
+    padding-top: 123px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 111px;
+    margin-bottom: 0;
+  }
+
+  &__title {
+    position: relative;
+    line-height: 28px;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-right: auto;
+    margin-left: auto;
+
+    &::before {
+      @include title-line;
+      top: -20px;
+    }
+
+    @media (min-width: $desktop-width) {
+      font-size: 40px;
+      line-height: 63px;
+      max-width: 640px;
+      margin-bottom: 6px;
+
+      &::before {
+        top: -8px;
+      }
+    }
+  }
+
+  &__description {
+    text-align: center;
+    margin-bottom: 15px;
+    line-height: 24px;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__list {
+    @media (min-width: $desktop-width) {
+      padding-left: 74px;
+    }
+
+    @media (min-width: 1760px) {
+      padding-right: 167px;
+    }
+  }
+}

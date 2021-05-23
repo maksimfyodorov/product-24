@@ -1,0 +1,35 @@
+extends ../base/base
+include ../../components/header/header
+include ../../components/slider/slider
+include ../../components/info/info
+include ../../components/reviews/reviews
+//- include ../../components/footer/footer
+
+block variables
+  -
+    const lang = 'ru'
+    const title = 'Product 24'
+    const keywords = 'product 24, главная страница, продукты круглосуточно, купить продукты'
+    const description = 'Product 24 - только свежие продукты 24/7'
+    const bodyClassName = 'i-page'
+
+block main
+  // abbreviation "i-page" means "index-page"
+  .i-page__header
+    +header()
+  .i-page__main
+    main.main
+      .main__top-content
+        h1.main__title Lorem ipsum, dolor sit amet consectetur
+        section.advantages
+          h2.advantages__title Advantages
+          .advantages__slider
+            +slider()
+        .parallax
+          .parallax__bubbles-left
+          .parallax__bubbles-right
+      .main__bottom-content
+        .main__info
+          +info()
+        .main__reviews
+          +reviews()

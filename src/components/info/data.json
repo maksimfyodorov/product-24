@@ -1,0 +1,22 @@
+{
+  "infoList": [
+    {
+      "iconSrc": "../src/components/info-list-item/img/icon-1.svg",
+      "dropdownText": "Laboriosam quas, aut consectetur animi autem aliquid consequuntur suscipit exercitationem laborum cupiditate magnam eaque quae delenit"
+    },
+    {
+      "iconSrc": "../src/components/info-list-item/img/icon-2.svg",
+      "dropdownText": "Laboriosam quas, aut consectetur animi autem aliquid consequuntur suscipit exercitationem laborum cupiditate magnam eaque quae delenit"
+    },{
+      "iconSrc": "../src/components/info-list-item/img/icon-3.svg",
+      "dropdownText": "Laboriosam quas, aut consectetur animi autem aliquid consequuntur suscipit exercitationem laborum cupiditate magnam eaque quae delenit",
+      "isExpanded": true
+    },{
+      "iconSrc": "../src/components/info-list-item/img/icon-4.svg",
+      "dropdownText": "Laboriosam quas, aut consectetur animi autem aliquid consequuntur suscipit exercitationem laborum cupiditate magnam eaque quae delenit"
+    },{
+      "iconSrc": "../src/components/info-list-item/img/icon-5.svg",
+      "dropdownText": "Laboriosam quas, aut consectetur animi autem aliquid consequuntur suscipit exercitationem laborum cupiditate magnam eaque quae delenit"
+    }
+  ]
+}

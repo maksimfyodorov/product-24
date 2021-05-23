@@ -1,0 +1,114 @@
+@import '../../theme/scss/mixins/arrow-down.scss';
+@import '../../theme/scss/variables.scss';
+
+.info-list-item {
+  $r: &;
+  position: relative;
+  font-weight: 700;
+  line-height: 19px;
+  padding-top: 16px;
+  padding-right: 14px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #E7EBF0;
+  cursor: pointer;
+  user-select: none;
+
+  &::before {
+    @include arrow-down;
+    content: '';
+    position: absolute;
+    top: 15px;
+    right: 4px;
+    transition: .5s;
+  }
+
+  &:last-child {
+    border-bottom: unset;
+  }
+
+  &:hover:not(._expanded) {
+    opacity: .7;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 21px;
+    padding-bottom: 21px;
+
+    &::before {
+      top: 22px;
+      right: 0;
+    }
+  }
+
+  &._expanded {
+    color: #00C368;
+
+    &::before {
+      transform: rotate(135deg);
+    }
+
+    #{$r}__dropdown {
+      display: block;
+      color: $text-color;
+    }
+
+    @media (min-width: $desktop-width) {
+      &::before {
+        top: 35px;
+      }
+    }
+  }
+
+  &__title {
+    @media (min-width: $small-tablet-width) {
+      padding-left: 64px;
+    }
+
+    @media (min-width: $desktop-width) {
+      font-size: 24px;
+    }
+  }
+
+  &__dropdown {
+    display: none;
+    padding-top: 15px;
+    font-weight: 400;
+    max-width: 530px;
+
+    @media (min-width: $small-tablet-width) {
+      padding-left: 64px;
+    }
+
+    @media (min-width: $desktop-width) {
+      max-width: 584px;
+      padding-top: 20px;
+      margin-bottom: -3px;
+    }
+  }
+
+  &__icon {
+    display: none;
+
+    @media (min-width: $small-tablet-width) {
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 6px;
+      width: 40px;
+      height: 40px;
+      border-radius: 40px;
+      background: #E7EBF0;
+
+      & img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 11px;
+    }
+  }
+}

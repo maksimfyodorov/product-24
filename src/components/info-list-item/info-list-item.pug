@@ -1,0 +1,7 @@
+mixin info-list-item({ itemTitle, dropdownText, isExpanded, iconSrc } = {})
+
+  li.info-list-item(class = isExpanded && '_expanded')
+    h3.info-list-item__title= itemTitle || 'Lorem ipsum, dolor sit amet  adipisicing elit.'
+    p.info-list-item__dropdown= dropdownText
+    .info-list-item__icon
+      img(src = iconSrc, alt="One of info-list icons")

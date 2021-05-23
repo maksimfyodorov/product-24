@@ -1,0 +1,50 @@
+mixin slider()
+  -
+    const cardDescription = 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.'
+    const alt = 'One of icons'
+    const fs = require('fs')
+    const data = JSON.parse(fs.readFileSync('./src/components/slider/data.json'))
+    const {cardIcons, cardIconsRow} = data
+
+  .slider
+    .slider__mobile
+      each cardIcon in cardIcons
+        - const {src} = cardIcon
+        .slider__card
+          .slider__card-icon
+            img(src = src, alt = alt)
+          .slider__card-description= cardDescription
+      .slider__berries
+    .slider__desktop
+      .slider__row
+        .slider__left-card-wrapper
+          .slider__card.--margin-left-auto
+            .slider__card-icon
+              img(src="../src/components/slider/svg/hangouts.svg", alt = alt)
+            .slider__card-description= cardDescription
+        .slider__right-card-wrapper
+          .slider__card
+            .slider__card-icon
+              img(src="../src/components/slider/svg/diskette.svg", alt = alt)
+            .slider__card-description= cardDescription
+      .slider__row._has-min-height
+        .slider__card._type_middle-row-left
+          .slider__card-icon
+            img(src="../src/components/slider/svg/notepad.svg", alt = alt)
+          .slider__card-description= cardDescription
+        .slider__card._type_middle-row-right
+          .slider__card-icon
+            img(src="../src/components/slider/svg/mouse.svg", alt = alt)
+          .slider__card-description= cardDescription
+        .slider__berries
+      .slider__row
+        .slider__left-card-wrapper
+          .slider__card.--margin-left-auto
+            .slider__card-icon
+              img(src="../src/components/slider/svg/hangouts.svg", alt = alt)
+            .slider__card-description= cardDescription
+        .slider__right-card-wrapper
+          .slider__card
+            .slider__card-icon
+              img(src="../src/components/slider/svg/diskette.svg", alt = alt)
+            .slider__card-description= cardDescription

@@ -1,0 +1,13 @@
+include ../review-card/review-card
+
+mixin reviews()
+  -
+    const fs = require('fs')
+    const data = JSON.parse(fs.readFileSync('./src/components/reviews/data.json'))
+    const {reviews} = data
+
+  section.reviews
+    h2.reviews__title Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+    .reviews__container
+      each review in reviews
+        +review-card(review)

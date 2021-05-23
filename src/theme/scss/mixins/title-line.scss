@@ -1,0 +1,9 @@
+@mixin title-line {
+  width: 184px;
+  height: 4px;
+  background: #00C368;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  content: '';
+}

@@ -1,0 +1,18 @@
+mixin header()
+  -
+    const linkAttributes = {
+        target: '_blank',
+        rel: 'noopener noreferrer'
+      }
+    const fs = require('fs')
+    const data = JSON.parse(fs.readFileSync('./src/components/header/data.json'))
+    const {navLinks} = data
+
+  header.header
+    .header__logo
+      img(src="../src/components/header/img/logo.svg", alt="Company logo")
+    nav.header__nav
+      each link in navLinks
+        - const {text, url} = link
+        a.header__nav-link(href = url)&attributes(linkAttributes)= text
+    button.header__button(type="button") Button

@@ -1,0 +1,55 @@
+@import '../../theme/scss/mixins/title-line.scss';
+@import '../../theme/scss/variables.scss';
+
+.reviews {
+  padding-top: 16px;
+  padding-bottom: 60px;
+
+  &::after {
+    content: '';
+    clear: both;
+    display: table;
+  }
+
+  @media (min-width: $small-tablet-width) {
+    padding-top: 123px;
+  }
+
+  @media (min-width: $desktop-width) {
+    background: #F5F5F5;
+  }
+
+  &__title {
+    position: relative;
+    padding: 0 8px;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    margin-bottom: 88px;
+    max-width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+
+    &::before {
+      @include title-line;
+      top: -20px;
+    }
+
+    @media (min-width: $desktop-width) {
+      font-size: 40px;
+      line-height: 47px;
+      padding: 0 4px;
+      max-width: 738px;
+      margin-bottom: 2px;
+    }
+  }
+
+  &__container {
+    @media (min-width: $desktop-width) {
+      float: right;
+      max-width: 760px;
+      padding-left: 10px;
+      margin-right: 80px;
+    }
+  }
+}

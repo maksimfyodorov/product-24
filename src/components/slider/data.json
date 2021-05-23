@@ -1,0 +1,22 @@
+{
+  "cardIcons": [
+    {
+      "src": "../src/components/slider/svg/hangouts.svg"
+    },{
+      "src": "../src/components/slider/svg/diskette.svg"
+    },{
+      "src": "../src/components/slider/svg/notepad.svg"
+    },{
+      "src": "../src/components/slider/svg/mouse.svg"
+    },{
+      "src": "../src/components/slider/svg/hangouts.svg"
+    }
+  ],
+  "cardIconsRow": [
+    {
+      "src": "../src/components/slider/svg/hangouts.svg"
+    },{
+      "src": "../src/components/slider/svg/diskette.svg"
+    }
+  ]
+}

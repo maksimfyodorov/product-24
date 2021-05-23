@@ -1,0 +1,14 @@
+{
+  "navLinks": [
+    {
+      "text": "NavItem1",
+      "url": "./mock.html"
+    },{
+      "text": "NavItem2",
+      "url": "./mock.html"
+    },{
+      "text": "NavItem3",
+      "url": "./mock.html"
+    }
+  ]
+}

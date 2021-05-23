@@ -1,0 +1,14 @@
+mixin review-card({ author, src, alt = 'Author photo', review, size, isReversed } = {})
+  -
+    const sizeModifiers = {
+      large: '_size_large'
+    }
+    const reversedModifier = isReversed && '_is-reversed'
+    const classes = [sizeModifiers[size], reversedModifier]
+
+  article.review-card(class = classes)
+    .review-card__img
+      img(src = src, alt = alt)
+    .review-card__content
+      p.review-card__review= review
+      p.review-card__author= author || 'Jane Doe'

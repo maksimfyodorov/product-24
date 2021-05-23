@@ -1,0 +1,14 @@
+include ../info-list-item/info-list-item
+
+mixin info()
+  -
+    const fs = require('fs')
+    const data = JSON.parse(fs.readFileSync('./src/components/info/data.json'))
+    const {infoList} = data
+
+  section.info
+    h2.info__title Lorem ipsum, dolor sit amet consectetur  elit.
+    p.info__description Porro ab rerum omnis magnam eligendi error nobis dolore?
+    ul.info__list
+      each item in infoList
+        +info-list-item(item)
