@@ -34,7 +34,12 @@ module.exports = merge(base, {
             },
           },
           'resolve-url-loader',
-          'sass-loader',
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true
+            }
+          }
         ]
       },
     ]
